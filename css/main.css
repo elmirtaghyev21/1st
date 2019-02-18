@@ -109,7 +109,10 @@ button {
 button:hover {
 	cursor: pointer;
 }
+.contact100-form-btn{
+  cursor: pointer;
 
+}
 iframe {
 	border: none !important;
 }
@@ -128,7 +131,7 @@ iframe {
 
 .container-contact100 {
   width: 100%;  
-  min-height: 100vh;
+  min-height: 10vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -139,7 +142,7 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background-color: #f2f2f2;
+  background-color: #4e54c8;
 }
 
 .wrap-contact100 {
@@ -302,6 +305,7 @@ textarea.input100 {
 .contact100-form-btn:hover:before {
   background-color: #403866;
   width: calc(100% + 20px);
+  box-shadow: 0 0 16px 0px #fcfcfc;
 }
 
 

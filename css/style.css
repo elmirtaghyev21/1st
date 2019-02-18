@@ -8,6 +8,52 @@
  Version: 1.1
 
 -----------------------------------------------------------------------------------*/
+@media screen and (max-width: 375px) {
+    #about{
+        background: url("../img/myImg/aboutBanner-xs.jpg") !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+    #about{
+        background: url("../img/myImg/aboutBanner-xs.jpg") !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+/*Малые девайсы («ландшафтные», < 768px)*/
+@media screen and (min-width: 767.98px) {
+    #about{
+        background: url("../img/myImg/aboutBanner-lg.jpg") !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+/*Средние девайсы («таблетки», < 992px)*/
+@media (min-width: 991.98px) {
+    #about{
+        background: url("../img/myImg/aboutBanner.jpg") !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+/*Большие девайсы (большие десктопы, < 1200px)*/
+@media (min-width: 1199.98px) {
+
+}
+/*additional querry*/
+@media (min-width: 1800px) {
+    #about{
+        background: url("../img/myImg/aboutBanner-xl.jpg") !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
 /* ----------------------------------------------------------------
 
  == Table Of Content
@@ -89,7 +135,7 @@ span, a, a:hover {
 .section-head h4 {
     font-weight: 600;
     position: relative;
-    color: #4e54c8;
+    color: #4E54C8;
     font-size: 35px;
     margin-bottom: 30px;
     margin-top: 0;
@@ -119,6 +165,7 @@ span, a, a:hover {
 }
 
 .section-head p {
+    color: #4E54C8 !important;
     margin: 15px auto 30px auto;
     width: 50%;
 }
@@ -306,7 +353,29 @@ span, a, a:hover {
     z-index: 3;
 }
 
+
+.myButn {
+    background: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: none !important;
+    overflow: hidden;
+    padding: 12px 35px;
+    position: relative;
+    transition: all .4s;
+    z-index: 3;
+}
 .butn span {
+    position: relative;
+    transition-delay: 0s;
+    z-index: 2;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 1px;
+}
+.myButn span {
     position: relative;
     transition-delay: 0s;
     z-index: 2;
@@ -327,17 +396,41 @@ span, a, a:hover {
     width: 0;
     z-index: 1;
 }
-
+.myXicon{
+    font-size: 40px !important;
+}
+.myButn:before, .myButn:after {
+    background: #fff;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    transition: width 0.4s;
+    width: 0;
+    z-index: -1;
+}
+.icon:hover{
+    transform: rotate(360deg);
+}
 .butn:after {
     background: #fff;
     opacity: 1;
     transition-delay: 0s;
 }
 
+.myButn:after {
+    background: #ffe000;
+    opacity: 1;
+    transition-delay: 0s;
+}
 .butn:hover:before, .butn:hover:after {
     width: 100%;
 }
-
+.myButn:hover:before, .myButn:hover:after {
+    width: 100%;
+}
 .butn:hover:after {
     transition-delay: .2s;
 }
@@ -434,8 +527,10 @@ span, a, a:hover {
 		 [ 03 Start Navbar ]
 -----------------------------------------------------------------*/
 .navbar {
-    background: transparent;
+    /*background: #4e54c8;*/
+    background: url("../img/nav/test.jpg");
     left: 0;
+    background-size: cover;
     min-height: 70px;
     position: absolute;
     top: 0;
@@ -516,10 +611,15 @@ span, a, a:hover {
     visibility: visible;
     transform: scale(1);
 }
-
+#about{
+    background: url("../img/myImg/aboutBanner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .nav-scroll {
-    background: #4e54c8;
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.05);
+    background: url("../img/nav/test.jpg");
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+    background-size: cover;
     left: 0;
     padding: 0;
     position: fixed;
@@ -867,13 +967,15 @@ span, a, a:hover {
 .about .info h2 {
     font-size: 30px;
     font-weight: 600;
-    color: #000;
+    color: black;
     margin-bottom: 20px;
 }
 
 .about .info p {
     margin: 0 0 30px;
     word-spacing: 1px;
+    color: black;
+    font-weight: 600;
 }
 
 .about .info .info-list i {
@@ -1183,7 +1285,8 @@ span, a, a:hover {
 		 [ 11 Start Team ]
 -----------------------------------------------------------------*/
 .team {
-    background-color: #F5F2FC;
+    background: url("../img/nav/banner.jpg");
+    background-size: cover;
 }
 
 .team .item {
@@ -1197,27 +1300,32 @@ span, a, a:hover {
 
 .team .item::before {
     position: absolute;
+    transition: 1s;
     content: "";
     width: 100%;
     height: calc(100% - 77px);
     left: 0;
     top: 0;
-    background: #fff;
+    background: url("../img/myImg/lent.png");
+    background-size: cover;
     opacity: 0;
     z-index: 2;
-    transition: all 0.3s ease-in;
 }
-
+.item::before:hover .item-img{
+    transform: scale(0.7,0.7);
+}
 .team .item:hover .social {
     opacity: 1 !important;
 }
 
 .team .item:hover::before {
-    opacity: 0.5 !important;
+    opacity: 1 !important;
+    transition: 1s;
 }
 
 .team .item:hover .info .social .icon {
     margin: 3px;
+    transition: 1s;
 }
 
 .team .item .team-img {
@@ -1232,18 +1340,18 @@ span, a, a:hover {
     transition: all .4s;
     width: 100%;
     z-index: 4;
-    background: #f9f9f9;
+    background: url(../img/myImg/lentv.png);
+    background-size: cover;
     padding: 20px 10px;
     text-align: center;
 }
 .scale{
-    background-color: #4e54c8;
     height: 50px;
     width: 50px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     cursor: pointer;
 }
 .team .item .info h6 {
@@ -1440,11 +1548,32 @@ span, a, a:hover {
 		 [ 10 Start Blog ]
 -----------------------------------------------------------------*/
 .blog .item {
-    background: #fff;
-    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.07);
+    background: white;
     padding-bottom: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #4e54c8;
+    box-shadow: 0 0 10px 2px black;
+    transition: 1s;
 }
-
+.blog .item:hover{
+    background: white;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #4e54c8;
+}
+.blog .item:hover{
+    background: rgb(255, 255, 255);
+    padding-bottom: 20px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #4e54c8;
+}
+.rmore:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+}
 .blog .item .post-img {
     position: relative;
 }
@@ -1811,10 +1940,11 @@ span, a, a:hover {
 		 [ start sponsors ]
 -----------------------------------------------------------------*/
 .sponsors {
-    background-image: url(../img/video.jpg);
-    background-size: cover;
+    background-image: url(../img/video1.jpg);
     background-attachment: fixed;
     position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 15px 0;
 }
 
@@ -1830,8 +1960,8 @@ span, a, a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background: #4e54c8;
-    opacity: 0.5;
+    background: #9e4bcd;
+    opacity: 0.9;
 }
 
 /* ----------------------------------------------------------------
@@ -1856,7 +1986,7 @@ span, a, a:hover {
 .page-contact .item .content h3 {
     display: inline-block;
     font-size: 20px;
-    color: #000;
+    color: black;
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -1865,26 +1995,36 @@ span, a, a:hover {
     display: inline-block;
     letter-spacing: 1px;
     margin-bottom: 0;
+    transition: 1s;
 }
-
+.page-contact .item .content p:hover{
+    color: white;
+    cursor: pointer;
+}
 .form input, .form textarea {
-    border: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #4e54c8 !important;
     color: #eee;
     padding: 15px;
     padding-left: 35px;
     width: 100%;
+    transition: .5s;
 }
 
 .form input:focus, .form textarea:focus {
-    border-color: #ddd;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: white !important;
 }
 
 .form i {
     position: absolute;
     top: 18px;
     left: 10px;
-    color: #4e54c8;
+    color: #ffffff;
 }
 
 .form textarea {
@@ -1959,7 +2099,6 @@ span, a, a:hover {
 -----------------------------------------------------------------*/
 .footer {
     background-color: #eeeeee;
-    padding: 50px 0 0;
     position: relative;
     overflow: hidden;
 }
@@ -1967,7 +2106,7 @@ span, a, a:hover {
 .footer svg {
     position: absolute;
     left: 0;
-    top: -40px;
+    top: 0px;
     width: 100%;
     height: 200px;
 }
@@ -1983,7 +2122,7 @@ span, a, a:hover {
     padding-bottom: 10px;
     text-transform: uppercase;
     position: relative;
-    color: #000;
+    color: #6067dc;
 }
 
 .footer h3:after {
@@ -2019,26 +2158,30 @@ span, a, a:hover {
     text-align: center;
     color: #fff;
     margin-right: 3px;
+    transition: 1s;
 }
 
 .footer .info .icon:hover {
     opacity: 0.9;
 }
 
-.footer .info .icon:first-of-type {
+.footer .info .icon:first-of-type:hover {
     background: #3b5998;
+    transform: rotate(360deg);
 }
-
-.footer .info .icon:nth-of-type(2) {
+.footer .info .icon:nth-of-type(2):hover {
     background: #1da1f2;
+    transform: rotate(360deg);
 }
 
-.footer .info .icon:nth-of-type(3) {
+.footer .info .icon:nth-of-type(3):hover {
     background: #dd4b39;
+    transform: rotate(360deg);
 }
 
-.footer .info .icon:nth-of-type(4) {
+.footer .info .icon:nth-of-type(4):hover {
     background: #0077b5;
+    transform: rotate(360deg);
 }
 
 .footer .footer-widget-list {
@@ -2079,6 +2222,7 @@ span, a, a:hover {
 
 .footer .footer-widget-list li a:hover {
     opacity: 1;
+    color: #6067dc;
 }
 
 .footer .footer-widget-list li a:hover:before {
@@ -2092,26 +2236,34 @@ span, a, a:hover {
 
 .footer .las-post ul li:hover {
     opacity: 1;
+    color: #6067dc;
+    cursor: pointer;
 }
 
 .footer .las-post ul li a {
     font-weight: 500;
-    color: #222;
+    color: #000;
+    opacity: 0.8;
+    transition: 1s;
 }
 
 .footer .las-post ul li span {
     font-weight: 100px;
-    color: #222;
+    color: #000;
+    opacity: 0.8;
+    transition: 1s;
 }
 
 .footer .contact-info li {
-    color: #222;
+    color: #000;
     opacity: 0.8;
     margin-bottom: 15px;
 }
 
 .footer .contact-info li:hover {
     opacity: 1;
+    color: #6067dc;
+    cursor: pointer;
 }
 
 .footer .contact-info .form-gr {
@@ -2124,22 +2276,26 @@ span, a, a:hover {
     padding: 10px 15px;
     border-radius: 50px;
     width: 100%;
+    transition: 1s;
 }
-
+.footer .contact-info .form-gr form input:focus {
+    border-style: solid;
+    border-color: #6067dc !important;
+    color: #6067dc;
+}
 .footer .contact-info .form-gr form a {
     position: absolute;
     right: 15px;
     top: 10px;
-    color: #000;
+    color:white;
     font-weight: 600;
     opacity: 0.8;
 }
 
 .footer .sub-footer {
-    background-color: #eeeeee;
     margin-top: 80px;
     padding: 20px 0 10px;
-    border-top: 1px solid #fff;
+    border-top: thin solid gray;
     color: #222;
     opacity: 0.8;
 }
