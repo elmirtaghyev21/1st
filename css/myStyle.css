@@ -37,9 +37,18 @@ body{
 
 }
 .myForm{
-    background-color: #9b55d0;
+    background-color: #ffffff;
 }
 .sponsorBox{
     box-shadow: 0 0 20px 3px #ffffff;
     border-radius: 100%;
+}
+#team .item:hover .item-img .myImga{
+    transform: rotate(360deg) !important;
+}
+.no-padding{
+    padding: 0 !important;
+}
+.no-margin{
+    margin: 0 !important;
 }

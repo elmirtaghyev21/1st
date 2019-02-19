@@ -558,7 +558,7 @@ span, a, a:hover {
     color: #fff;
     display: block;
     opacity: 0.6;
-    padding: 22px 0 0;
+    padding: 0px 0 0;
     text-align: center;
     width: 30px;
 }
@@ -1331,19 +1331,26 @@ span, a, a:hover {
 .team .item .team-img {
     overflow: hidden;
     position: relative;
+    padding: 2.5em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
 }
 
 .team .item .info {
     bottom: 10px;
     left: 0;
-    padding: 0 15px;
     transition: all .4s;
     width: 100%;
     z-index: 4;
-    background: url(../img/myImg/lentv.png);
-    background-size: cover;
+    /*background: url(../img/myImg/lentv.png);*/
+    /*background-size: cover;*/
     padding: 20px 10px;
     text-align: center;
+    background-color: rgba(147, 149, 188,0.5);
+    border-left: solid rebeccapurple;
+    border-right: solid rebeccapurple;
+    border-width: thin;
 }
 .scale{
     height: 50px;
@@ -2005,7 +2012,10 @@ span, a, a:hover {
     border-radius: 10px;
     border-style: solid;
     border-width: thin;
-    border-color: #4e54c8 !important;
+    border-color: white;
+    border-bottom-color: #c761c3;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     color: #eee;
     padding: 15px;
     padding-left: 35px;
@@ -2017,7 +2027,7 @@ span, a, a:hover {
     border-radius: 10px;
     border-style: solid;
     border-width: thin;
-    border-color: white !important;
+    border-color: #9b55d0 !important;
 }
 
 .form i {
